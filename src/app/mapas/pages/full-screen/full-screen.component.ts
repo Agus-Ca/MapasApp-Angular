@@ -3,6 +3,8 @@ import * as mapboxgl from 'mapbox-gl'
 
 import { mapbox } from '../../../../environments/mapboxToken';
 
+
+
 @Component({
   selector: 'app-full-screen',
   templateUrl: './full-screen.component.html',
@@ -20,12 +22,13 @@ export class FullScreenComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    (mapboxgl as any).accessToken = mapbox.token;
 
     var map = new mapboxgl.Map({
-    container: 'mapa',
-    style: 'mapbox://styles/mapbox/streets-v11'
-  });
+      container: 'mapa',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [ -68.84456222709373, -32.88968870815972 ],
+      zoom: 17
+    });
 
   }
 

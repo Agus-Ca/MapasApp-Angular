@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import * as mapboxgl from 'mapbox-gl'
+import { mapbox } from 'src/environments/mapboxToken';
+
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'mapasApp';
+export class AppComponent implements OnInit {
+  
+  ngOnInit(): void {
+    (mapboxgl as any).accessToken = mapbox.token;
+    
+  }
+
 }
