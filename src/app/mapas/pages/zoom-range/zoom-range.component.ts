@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 
-import * as mapboxgl from 'mapbox-gl'
+import * as mapboxgl from 'mapbox-gl';
 
 
 
