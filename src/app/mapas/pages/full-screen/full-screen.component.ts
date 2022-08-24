@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl'
 
-import { mapbox } from '../../../../environments/mapboxToken';
-
 
 
 @Component({
